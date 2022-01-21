@@ -9,6 +9,6 @@
 #ifndef PORT_H_
 #define PORT_H_
 
-#include "../Port_core.h"
+#include "Port_core.h"
 
 #endif /* PORT_H_ */

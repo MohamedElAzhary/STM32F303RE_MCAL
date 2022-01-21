@@ -9,7 +9,7 @@
 #ifndef PORT_CORE_H_
 #define PORT_CORE_H_
 
-#include "Port_cfg.h"
+#include "Template_Port_cfg.h"
 #include "stdint.h"
 
 /* Define Pins */
@@ -39,6 +39,10 @@
 #define PORT_CONST_PORT_F	(5U)	/* Defines Port F */
 #define PORT_CONST_PORT_G	(6U)	/* Defines Port G */
 #define PORT_CONST_PORT_H	(7U)	/* Defines Port H */
+
+/* Define Port Pin States */
+#define PORT_CONST_PIN_STATE_LOW	(0U)	/* Defines Pin state low */
+#define PORT_CONST_PIN_STATE_HIGH	(1U)	/* Defines Pin state high */
 
 /* Define Port Modes */
 #define PORT_CONST_PORT_PIN_MODE_INPUT		(0U)	/* Define Port Pin Mode as Input Mode*/
