@@ -17,7 +17,7 @@
 *****************************************************************************/
 #define PORT_CFG_PORT_A_ENABLE		(STD_ON)
 #define PORT_CFG_PORT_B_ENABLE		(STD_OFF)
-#define PORT_CFG_PORT_C_ENABLE		(STD_OFF)
+#define PORT_CFG_PORT_C_ENABLE		(STD_ON)
 #define PORT_CFG_PORT_D_ENABLE		(STD_OFF)
 #define PORT_CFG_PORT_E_ENABLE		(STD_OFF)
 #define PORT_CFG_PORT_F_ENABLE		(STD_OFF)

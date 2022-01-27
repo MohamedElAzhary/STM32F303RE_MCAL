@@ -48,7 +48,6 @@
 /*                            General Purpose I/O (PORT)                      */
 /*                                                                            */
 /******************************************************************************/
-/*******************  Reset values for PORT_REG_PORTx registers   *****************/
 
 
 /* Ports Base Addresses */
@@ -274,79 +273,6 @@
 #define PORT_REG_PUPDR_PUPDR14_0       ((uint32_t)0x0000001C)
 #define PORT_REG_PUPDR_PUPDR15_0       ((uint32_t)0x0000001E)
 
-/*******************  Bit definition for PORT_REG_IDR register  *******************/
-#define PORT_REG_IDR_BITS_MASK	   ((uint32_t)0x00000001)
-#define PORT_REG_IDR_IDR0_0        ((uint32_t)0x00000000)
-#define PORT_REG_IDR_IDR1_0        ((uint32_t)0x00000001)
-#define PORT_REG_IDR_IDR2_0        ((uint32_t)0x00000002)
-#define PORT_REG_IDR_IDR3_0        ((uint32_t)0x00000003)
-#define PORT_REG_IDR_IDR4_0        ((uint32_t)0x00000004)
-#define PORT_REG_IDR_IDR5_0        ((uint32_t)0x00000005)
-#define PORT_REG_IDR_IDR6_0        ((uint32_t)0x00000006)
-#define PORT_REG_IDR_IDR7_0        ((uint32_t)0x00000007)
-#define PORT_REG_IDR_IDR8_0        ((uint32_t)0x00000008)
-#define PORT_REG_IDR_IDR9_0        ((uint32_t)0x00000009)
-#define PORT_REG_IDR_IDR10_0       ((uint32_t)0x0000000A)
-#define PORT_REG_IDR_IDR11_0       ((uint32_t)0x0000000B)
-#define PORT_REG_IDR_IDR12_0       ((uint32_t)0x0000000C)
-#define PORT_REG_IDR_IDR13_0       ((uint32_t)0x0000000D)
-#define PORT_REG_IDR_IDR14_0       ((uint32_t)0x0000000E)
-#define PORT_REG_IDR_IDR15_0       ((uint32_t)0x0000000F)
-
-/******************  Bit definition for PORT_REG_ODR register  ********************/
-#define PORT_REG_ODR_BITS_MASK	   ((uint32_t)0x00000001)
-#define PORT_REG_ODR_ODR0_0        ((uint32_t)0x00000000)
-#define PORT_REG_ODR_ODR1_0        ((uint32_t)0x00000001)
-#define PORT_REG_ODR_ODR2_0        ((uint32_t)0x00000002)
-#define PORT_REG_ODR_ODR3_0        ((uint32_t)0x00000003)
-#define PORT_REG_ODR_ODR4_0        ((uint32_t)0x00000004)
-#define PORT_REG_ODR_ODR5_0        ((uint32_t)0x00000005)
-#define PORT_REG_ODR_ODR6_0        ((uint32_t)0x00000006)
-#define PORT_REG_ODR_ODR7_0        ((uint32_t)0x00000007)
-#define PORT_REG_ODR_ODR8_0        ((uint32_t)0x00000008)
-#define PORT_REG_ODR_ODR9_0        ((uint32_t)0x00000009)
-#define PORT_REG_ODR_ODR10_0       ((uint32_t)0x0000000A)
-#define PORT_REG_ODR_ODR11_0       ((uint32_t)0x0000000B)
-#define PORT_REG_ODR_ODR12_0       ((uint32_t)0x0000000C)
-#define PORT_REG_ODR_ODR13_0       ((uint32_t)0x0000000D)
-#define PORT_REG_ODR_ODR14_0       ((uint32_t)0x0000000E)
-#define PORT_REG_ODR_ODR15_0       ((uint32_t)0x0000000F)
-
-/****************** Bit definition for PORT_REG_BSRR register  ********************/
-#define PORT_REG_BSRR_BITS_MASK        ((uint32_t)0x00000001)
-#define PORT_REG_BSRR_BS_0             ((uint32_t)0x00000000)
-#define PORT_REG_BSRR_BS_1             ((uint32_t)0x00000001)
-#define PORT_REG_BSRR_BS_2             ((uint32_t)0x00000002)
-#define PORT_REG_BSRR_BS_3             ((uint32_t)0x00000003)
-#define PORT_REG_BSRR_BS_4             ((uint32_t)0x00000004)
-#define PORT_REG_BSRR_BS_5             ((uint32_t)0x00000005)
-#define PORT_REG_BSRR_BS_6             ((uint32_t)0x00000006)
-#define PORT_REG_BSRR_BS_7             ((uint32_t)0x00000007)
-#define PORT_REG_BSRR_BS_8             ((uint32_t)0x00000008)
-#define PORT_REG_BSRR_BS_9             ((uint32_t)0x00000009)
-#define PORT_REG_BSRR_BS_10            ((uint32_t)0x0000000A)
-#define PORT_REG_BSRR_BS_11            ((uint32_t)0x0000000B)
-#define PORT_REG_BSRR_BS_12            ((uint32_t)0x0000000C)
-#define PORT_REG_BSRR_BS_13            ((uint32_t)0x0000000D)
-#define PORT_REG_BSRR_BS_14            ((uint32_t)0x0000000E)
-#define PORT_REG_BSRR_BS_15            ((uint32_t)0x0000000F)
-#define PORT_REG_BSRR_BR_0             ((uint32_t)0x00000010)
-#define PORT_REG_BSRR_BR_1             ((uint32_t)0x00000011)
-#define PORT_REG_BSRR_BR_2             ((uint32_t)0x00000012)
-#define PORT_REG_BSRR_BR_3             ((uint32_t)0x00000013)
-#define PORT_REG_BSRR_BR_4             ((uint32_t)0x00000014)
-#define PORT_REG_BSRR_BR_5             ((uint32_t)0x00000015)
-#define PORT_REG_BSRR_BR_6             ((uint32_t)0x00000016)
-#define PORT_REG_BSRR_BR_7             ((uint32_t)0x00000017)
-#define PORT_REG_BSRR_BR_8             ((uint32_t)0x00000018)
-#define PORT_REG_BSRR_BR_9             ((uint32_t)0x00000019)
-#define PORT_REG_BSRR_BR_10            ((uint32_t)0x0000001A)
-#define PORT_REG_BSRR_BR_11            ((uint32_t)0x0000001B)
-#define PORT_REG_BSRR_BR_12            ((uint32_t)0x0000001C)
-#define PORT_REG_BSRR_BR_13            ((uint32_t)0x0000001D)
-#define PORT_REG_BSRR_BR_14            ((uint32_t)0x0000001E)
-#define PORT_REG_BSRR_BR_15            ((uint32_t)0x0000001F)
-
 /****************** Bit definition for PORT_REG_LCKR register  ********************/
 #define PORT_REG_LCKR_BITS_MASK	     ((uint32_t)0x00000001)
 #define PORT_REG_LCKR_LCKR0_0        ((uint32_t)0x00000000)
@@ -408,9 +334,43 @@
 #define PORT_REG_BRR_BRR14_0       ((uint32_t)0x0000000E)
 #define PORT_REG_BRR_BRR15_0       ((uint32_t)0x0000000F)
 
-#define RCC_REG_RCC_BASE_REG       ((uint32_t)0x40021000)
-#define RCC_REG_AHBENR_OFFSET	   ((uint32_t)0x00000014)
+
+/******************************************************************************/
+/*                                                                            */
+/*                        Reset and Clock Control (RCC)                       */
+/*                                                                            */
+/******************************************************************************/
+/* RCC Constants */
+#define RCC_CONST_CLOCK_ENABLED			(1U)
+#define RCC_CONST_CLOCK_DISABLED		(0U)
+
+/* RCC Registers Base Addresses and Offset */
+#define RCC_REG_RCC_BASE_REG       		((uint32_t)0x40021000)
+#define RCC_REG_AHBENR_OFFSET	   		((uint32_t)0x00000014)
+
+/* RCC Registers */
 #define RCC_REG_AHBENR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_AHBENR_OFFSET )))
+
+
+/*********** Bit definition for RCC_REG_AHBENR register  *********************/
+
+#define RCC_REG_AHBENR_DMA1EN	(0U)
+#define RCC_REG_AHBENR_DMA2EN	(1U)
+#define RCC_REG_AHBENR_SRAMEN	(2U)
+#define RCC_REG_AHBENR_FLITFEN	(4U)
+#define RCC_REG_AHBENR_FMCEN	(5U)
+#define RCC_REG_AHBENR_CRCEN	(6U)
+#define RCC_REG_AHBENR_IOPHEN	(16U)
+#define RCC_REG_AHBENR_IOPAEN	(17U)
+#define RCC_REG_AHBENR_IOPBEN	(18U)
+#define RCC_REG_AHBENR_IOPCEN	(19U)
+#define RCC_REG_AHBENR_IOPDEN	(20U)
+#define RCC_REG_AHBENR_IOPEEN	(21U)
+#define RCC_REG_AHBENR_IOPFEN	(22U)
+#define RCC_REG_AHBENR_IOPGEN	(23U)
+#define RCC_REG_AHBENR_TSCEN	(24U)
+#define RCC_REG_AHBENR_ADC12EN	(28U)
+#define RCC_REG_AHBENR_ADC34EN	(29U)
 
 /*****************************************************************************/
 
