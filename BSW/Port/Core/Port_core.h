@@ -9,7 +9,7 @@
 #ifndef PORT_CORE_H_
 #define PORT_CORE_H_
 
-#include "Template_Port_cfg.h"
+#include "Port_cfg.h"
 #include "stdint.h"
 
 /* Define Pins */
