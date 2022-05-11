@@ -372,6 +372,54 @@
 #define RCC_REG_AHBENR_ADC12EN	(28U)
 #define RCC_REG_AHBENR_ADC34EN	(29U)
 
+
+/******************************************************************************/
+/*                                                                            */
+/*         Universal Sync Async Receiver Transmitter Protocol (USART)         */
+/*                                                                            */
+/******************************************************************************/
+#define USART_REG_USART1_BASE_ADDRESS		((uint32_t) 0x40013800)
+#define USART_REG_USART2_BASE_ADDRESS		((uint32_t) 0x40004400)
+#define USART_REG_USART3_BASE_ADDRESS		((uint32_t) 0x40004800)
+#define USART_REG_USART2_BASE_ADDRESS		((uint32_t) 0x40004C00)
+#define USART_REG_USART3_BASE_ADDRESS		((uint32_t) 0x40005000)
+
+#define USART_REG_CR1_OFFSET				((uint32_t) 0x00000000)
+
+
+#define USART_REG_USART1_CR1				(*((volatile uint32_t*) (USART_REG_USART1_BASE_ADDRESS + USART_REG_CR1_OFFSET) ))
+#define USART_REG_USART2_CR1				(*((volatile uint32_t*) (USART_REG_USART2_BASE_ADDRESS + USART_REG_CR1_OFFSET) ))
+#define USART_REG_USART3_CR1				(*((volatile uint32_t*) (USART_REG_USART3_BASE_ADDRESS + USART_REG_CR1_OFFSET) ))
+#define USART_REG_USART4_CR1				(*((volatile uint32_t*) (USART_REG_USART4_BASE_ADDRESS + USART_REG_CR1_OFFSET) ))
+#define USART_REG_USART5_CR1				(*((volatile uint32_t*) (USART_REG_USART5_BASE_ADDRESS + USART_REG_CR1_OFFSET) ))
+
+/****************** Bit definition for USART_REG_USART_CR1 register ********************/
+#define USART_REG_CR1_UE			(0U)
+#define USART_REG_CR1_UESM			(1U)
+#define USART_REG_CR1_RE			(2U)
+#define USART_REG_CR1_TE			(3U)
+#define USART_REG_CR1_IDLEIE		(4U)
+#define USART_REG_CR1_RXNEIE		(5U)
+#define USART_REG_CR1_TCIE			(6U)
+#define USART_REG_CR1_TXEIE			(7U)
+#define USART_REG_CR1_PEIE			(8U)
+#define USART_REG_CR1_PS			(9U)
+#define USART_REG_CR1_PCE			(10U)
+#define USART_REG_CR1_WAKE			(11U)
+#define USART_REG_CR1_M0			(12U)
+#define USART_REG_CR1_MME			(13U)
+#define USART_REG_CR1_CMIE			(14U)
+#define USART_REG_CR1_OVER8			(15U)
+#define USART_REG_CR1_DEDT_DEDT0	(16U)
+#define USART_REG_CR1_DEAT_DEAT0	(21U)
+#define USART_REG_CR1_RTOIE			(26U)
+#define USART_REG_CR1_EOBIE			(27U)
+#define USART_REG_CR1_M1			(28U)
+
+
+
+/****************** Reset values for USART Registers *************************/
+#define USART_REG_CR1_RESET_VALUE			((uint32_t) 0x00000000)
 /*****************************************************************************/
 
 /*******************************Global-Variables******************************/
