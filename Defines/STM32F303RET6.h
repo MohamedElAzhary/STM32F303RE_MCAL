@@ -14,7 +14,7 @@
 
 /**********************************Macros*************************************/
 #define STD_ON		(1U)
-#define STD_OFF		(2U)
+#define STD_OFF		(0U)
 
 /******************************************************************************/
 /*                                                                            */
@@ -346,7 +346,6 @@
 
 /* RCC Registers Base Addresses and Offset */
 #define RCC_REG_RCC_BASE_REG       		((uint32_t)0x40021000)
-#define RCC_REG_AHBENR_OFFSET	   		((uint32_t)0x00000014)
 #define RCC_REG_CR_OFFSET				((uint32_t)0x00000000)
 #define RCC_REG_CFGR_OFFSET				((uint32_t)0x00000004)
 #define RCC_REG_CIR_OFFSET				((uint32_t)0x00000008)
@@ -355,9 +354,49 @@
 #define RCC_REG_AHBENR_OFFSET			((uint32_t)0x00000014)
 #define RCC_REG_APB2ENR_OFFSET			((uint32_t)0x00000018)
 #define RCC_REG_APB1ENR_OFFSET			((uint32_t)0x0000001C)
+#define RCC_REG_BDCR_OFFSET				((uint32_t)0x00000020)
+#define RCC_REG_CSR_OFFSET				((uint32_t)0x00000024)
+#define RCC_REG_AHBRSTR_OFFSET			((uint32_t)0x00000028)
+#define RCC_REG_CFGR2_OFFSET			((uint32_t)0x0000002C)
+#define RCC_REG_CFGR3_OFFSET			((uint32_t)0x00000030)
 
 /* RCC Registers */
-#define RCC_REG_AHBENR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_AHBENR_OFFSET )))
+#define RCC_REG_CR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CR_OFFSET )))
+#define RCC_REG_CFGR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CFGR_OFFSET )))
+#define RCC_REG_CIR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CIR_OFFSET )))
+#define RCC_REG_APB2RSTR       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_APB2RSTR_OFFSET )))
+#define RCC_REG_APB1RSTR       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_APB1RSTR_OFFSET )))
+#define RCC_REG_AHBENR   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_AHBENR_OFFSET )))
+#define RCC_REG_APB2ENR   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_APB2ENR_OFFSET )))
+#define RCC_REG_APB1ENR   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_APB1ENR_OFFSET )))
+#define RCC_REG_BDCR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_BDCR_OFFSET )))
+#define RCC_REG_CSR   	       (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CSR_OFFSET )))
+#define RCC_REG_AHBRSTR   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_AHBRSTR_OFFSET )))
+#define RCC_REG_CFGR2   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CFGR2_OFFSET )))
+#define RCC_REG_CFGR3   	   (*((volatile uint32_t*)( RCC_REG_RCC_BASE_REG + RCC_REG_CFGR3_OFFSET )))
+
+/****************** Bit definition for RCC_REG_CFGR3 register  ******************/
+#define RCC_REG_CFGR3_TIM34SW		(25U)
+#define RCC_REG_CFGR3_TIM2SW		(24U)
+#define RCC_REG_CFGR3_UART5SW		(22U)
+#define RCC_REG_CFGR3_UART4SW		(20U)
+#define RCC_REG_CFGR3_UART3SW		(18U)
+#define RCC_REG_CFGR3_UART2SW		(16U)
+#define RCC_REG_CFGR3_TIM20SW		(15U)
+#define RCC_REG_CFGR3_TIM17SW		(13U)
+#define RCC_REG_CFGR3_TIM16SW		(11U)
+#define RCC_REG_CFGR3_TIM15SW		(10U)
+#define RCC_REG_CFGR3_TIM8SW		(9U)
+#define RCC_REG_CFGR3_TIM1SW		(8U)
+#define RCC_REG_CFGR3_I2C3SW		(6U)
+#define RCC_REG_CFGR3_I2C2SW		(5U)
+#define RCC_REG_CFGR3_I2C1SW		(4U)
+#define RCC_REG_CFGR3_USART1SW		(0U)
+
+/****************** Bit definition for RCC_REG_CFGR2 register  ******************/
+#define RCC_REG_CFGR2_ADC34PRES				(9U)
+#define RCC_REG_CFGR2_ADC12PRES				(4U)
+#define RCC_REG_CFGR2_PREDIV				(0U)
 
 /****************** Bit definition for RCC_REG_CR register  ******************/
 #define RCC_REG_CR_PLLRDY			(25U)
@@ -386,28 +425,42 @@
 #define RCC_REG_CFGR_SWS				(2U)
 #define RCC_REG_CFGR_SW					(0U)
 
-/****************** Bit definition for RCC_REG_ register  ******************/
-#define RCC_REG_				(31U)
-#define RCC_REG_				(28U)
-#define RCC_REG_				(24U)
-#define RCC_REG_				(23U)
-#define RCC_REG_				(22U)
-#define RCC_REG_				(18U)
-#define RCC_REG_				(17U)
-#define RCC_REG_				(15U)
-#define RCC_REG_				(11U)
-#define RCC_REG_				(8U)
-#define RCC_REG_				(4U)
-#define RCC_REG_				(2U)
-#define RCC_REG_				()
-#define RCC_REG_				(18U)
-#define RCC_REG_				(17U)
-#define RCC_REG_				(15U)
-#define RCC_REG_				(11U)
-#define RCC_REG_				(8U)
-#define RCC_REG_				(4U)
-#define RCC_REG_				(2U)
-#define RCC_REG_				()
+/****************** Bit definition for RCC_REG_AHBRSTR register  ******************/
+#define RCC_REG_AHBRSTR_ADC34RST		(29U)
+#define RCC_REG_AHBRSTR_ADC12RST		(28U)
+#define RCC_REG_AHBRSTR_TSCRST			(24U)
+#define RCC_REG_AHBRSTR_IOPGRST			(23U)
+#define RCC_REG_AHBRSTR_IOPFRST			(22U)
+#define RCC_REG_AHBRSTR_IOPERST			(21U)
+#define RCC_REG_AHBRSTR_IOPDRST			(20U)
+#define RCC_REG_AHBRSTR_IOPCRST			(19U)
+#define RCC_REG_AHBRSTR_IOPBRST			(18U)
+#define RCC_REG_AHBRSTR_IOPARST			(17U)
+#define RCC_REG_AHBRSTR_IOPHRST			(16U)
+#define RCC_REG_AHBRSTR_FMCRST			(5U)
+
+/****************** Bit definition for RCC_REG_CSR register  ******************/
+#define RCC_REG_CSR_LPWRRSTF			(31U)
+#define RCC_REG_CSR_WWDGRSTF			(30U)
+#define RCC_REG_CSR_IWWDGRSTF			(29U)
+#define RCC_REG_CSR_SFTRSTF				(28U)
+#define RCC_REG_CSR_PORRSTF				(27U)
+#define RCC_REG_CSR_PINRSTF				(26U)
+#define RCC_REG_CSR_OBLRSTF				(25U)
+#define RCC_REG_CSR_RMVF				(24U)
+#define RCC_REG_V18PWRRSTF				(23U)
+#define RCC_REG_LSIRDY					(1U)
+#define RCC_REG_LSION					(0U)
+
+
+/****************** Bit definition for RCC_REG_BDCR register  ******************/
+#define RCC_REG_BDCR_BDRST				(16U)
+#define RCC_REG_BDCR_RTCEN				(15U)
+#define RCC_REG_BDCR_RTCSEL				(8U)
+#define RCC_REG_BDCR_LSEDRV				(3U)
+#define RCC_REG_BDCR_LSEBYP				(2U)
+#define RCC_REG_BDCR_LSERDY				(1U)
+#define RCC_REG_BDCR_LSEON				(0U)
 
 /****************** Bit definition for RCC_REG_APB1ENR register  ******************/
 #define RCC_REG_APB1ENR_I2C3EN				(30U)
@@ -516,25 +569,7 @@
 #define RCC_REG_CIR_LSERDYF		(1U)
 #define RCC_REG_CIR_LSIRDYF		(0U)
 
-/*********** Bit definition for RCC_REG_AHBENR register  *********************/
 
-#define RCC_REG_AHBENR_DMA1EN	(0U)
-#define RCC_REG_AHBENR_DMA2EN	(1U)
-#define RCC_REG_AHBENR_SRAMEN	(2U)
-#define RCC_REG_AHBENR_FLITFEN	(4U)
-#define RCC_REG_AHBENR_FMCEN	(5U)
-#define RCC_REG_AHBENR_CRCEN	(6U)
-#define RCC_REG_AHBENR_IOPHEN	(16U)
-#define RCC_REG_AHBENR_IOPAEN	(17U)
-#define RCC_REG_AHBENR_IOPBEN	(18U)
-#define RCC_REG_AHBENR_IOPCEN	(19U)
-#define RCC_REG_AHBENR_IOPDEN	(20U)
-#define RCC_REG_AHBENR_IOPEEN	(21U)
-#define RCC_REG_AHBENR_IOPFEN	(22U)
-#define RCC_REG_AHBENR_IOPGEN	(23U)
-#define RCC_REG_AHBENR_TSCEN	(24U)
-#define RCC_REG_AHBENR_ADC12EN	(28U)
-#define RCC_REG_AHBENR_ADC34EN	(29U)
 
 
 /******************************************************************************/
